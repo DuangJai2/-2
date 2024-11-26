@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ຂໍອະນຸຍາດແມ່ ຊື່ໂທລະສັບມືຖື</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ຂໍອະນຸຍາດແມ່ຊື້ໂທລະສັບໃຫ້ລູກ</h1>
+            <p>ແມ່ຂ້ອຍຕ້ອງການຂໍອະນຸຍາດຊື່ໂທລະສັບມືຖືໃໝ່</p>
+        </header>
+        
+        <div class="choices">
+            <p>ແມ່ຄິດວ່າຢ່າງໃດກັບການຊື່ໂທລະສັບມືຖືໃໝ່?</p>
+            <div class="buttons">
+                <button class="buy" onclick="handleChoice(true)">ຊື່</button>
+                <button class="no-buy" onclick="handleChoice(false)">ບໍ່ຊື່</button>
+            </div>
+        </div>
+        
+        <div id="response" class="response"></div>
+    </div>
+
+    <script>
+        function handleChoice(isBuying) {
+            const response = document.getElementById('response');
+            if (isBuying) {
+                response.innerText = "ຂອບໃຈແມ່";
+            } else {
+                response.innerText = "ຊື້ໃຫ້ສານະນ່ວຍນີ້ສິເປ່ແລ້ວ.";
+            }
+        }
+    </script>
+</body>
+</html>
